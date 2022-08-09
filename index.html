@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js" defer></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>JAVASCRIPT TASK LIST</header>
+    <main>
+        <section>
+            <form action="">
+
+                <div>
+                    <label for="">Task</label>
+                    <input type="text" required name="task" class="large" placeholder="Breakfast as Tiffany's">
+                </div>
+
+                <div>
+                    <label for="">Required By</label>
+                    <input type="date" required name="requiredBy">
+                </div>
+
+                <div>
+                    <label for="">Category</label>
+                    <select name="category" id="">
+                        <option value="Personal">Personal</option>
+                        <option value="Work">Work</option>
+                    </select>
+                </div>
+                <nav>
+                    <a href="#">save task</a>
+                    <a href="#">Clear task</a>
+                </nav>
+            </form>
+        </section>
+        <section>
+            <table id="tblTasks">
+                <colgroup>
+                    <col width="50%">
+                    <col width="25%">
+                    <col width="25%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Due</th>
+                        <th>Category</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>Return library books</td>
+                        <td><time datetime="2022-10-14">2022-10-14</time></td>
+                        <td>Personal</td>
+                    </tr>
+
+                    <tr class="even">
+                        <td>Perform project demo to stakeholders</td>
+                        <td><time datetime="2013-10-14">2013-10-14</time></td>
+                        <td>Work</td>
+                    </tr>
+
+                    <tr>
+                        <td>Meet friends for dinner</td>
+                        <td><time datetime="2022-05-14">2013-10-14</time></td>
+                        <td>Personal</td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <nav>
+                <a href="#" id="addbtn">Add task</a>
+            </nav>
+        </section>
+        <section class="map-grid">
+
+            <div class="locationmap">
+                <h2>Location Coordinates</h2>
+
+            </div>
+            <div id="map"></div>
+
+        </section>
+    </main>
+    <footer>You have 3 tasks</footer>
+
+
+    <script src="script.js" defer type="module"></script>
+
+</body>
+
+</html>
